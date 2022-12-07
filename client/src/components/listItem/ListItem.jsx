@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 export default function ListItem({ index, item }) {
   const [isHovered, setIsHovered] = useState(false);
   const [movie, setMovie] = useState({});
-  axios = axios.create({ baseURL: process.env.API_URL });
+  const axiosInstance = axios.create({ baseURL: process.env.REACT_APP_API_URL });
 
   useEffect(() => {
     const getMovie = async () => {
